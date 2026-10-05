@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Analytics Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>GitHub Analytics Dashboard</h1>
+    <p>Enter a GitHub username to see their profile, repositories and Statistics</p>
+  </header>
+
+  <main>
+    <section id="search-section">
+      <input type="text" id="username-input" placeholder="Enter GitHub username">
+      <button id="search-button">Search</button>
+    </section>
+
+    <p id="loading-message" class="hidden">Loading...</p>
+    <p id="error-message" class="hidden">
+      User not found.<br>
+      Please check the username and try again.
+    </p>
+
+    <div id="dashboard" class="hidden">
+
+      <section id="profile-section" class="card">
+        <img id="avatar" src="" alt="Profile picture">
+        <div id="profile-info">
+          <h2 id="name"></h2>
+          <p id="username"></p>
+          <p id="bio"></p>
+          <p id="joined"></p>
+          <a id="profile-link" href="#" target="_blank">View on GitHub</a>
+        </div>
+      </section>
+
+      <section id="stats-section">
+        <h2>Statistics</h2>
+        <div id="stats-grid">
+          <div class="stat-box"><h3 id="stat-repos">0</h3><p>Total Repositories</p></div>
+          <div class="stat-box"><h3 id="stat-stars">0</h3><p>Total Stars</p></div>
+          <div class="stat-box"><h3 id="stat-forks">0</h3><p>Total Forks</p></div>
+          <div class="stat-box"><h3 id="stat-followers">0</h3><p>Followers</p></div>
+          <div class="stat-box"><h3 id="stat-following">0</h3><p>Following</p></div>
+        </div>
+      </section>
+
+      <section id="language-section" class="card">
+        <h2>Languages Used</h2>
+        <div id="language-list"></div>
+      </section>
+
+      <section id="repo-section">
+        <h2>Repositories</h2>
+        <div id="repo-list"></div>
+      </section>
+
+    </div>
+    <footer>
+      <image id="githublogo" src="GitHub-logo-500x289.webp" style="height: 100px;"></image>
+      <h1>THE FUTURE OF BUILDING HAPPENS TOGETHER</h1>
+      
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
