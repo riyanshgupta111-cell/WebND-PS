@@ -109,10 +109,7 @@ function displayUser(user) {
   document.getElementById("username").textContent = "@" + user.login;
   document.getElementById("bio").textContent = user.bio || "No bio available.";
 
-  const joinedDate = new Date(user.created_at).toLocaleDateString();
-  document.getElementById("joined").textContent = "Joined: " + joinedDate;
-
-  document.getElementById("profile-link").href = user.html_url;
+  
 }
 
 function displayStats(user, analytics) {
