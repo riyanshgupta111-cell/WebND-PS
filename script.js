@@ -107,7 +107,7 @@ function displayUser(user) {
   document.getElementById("avatar").src = user.avatar_url;
   document.getElementById("name").textContent = user.name || user.login;
   document.getElementById("username").textContent = "@" + user.login;
-  document.getElementById("bio").textContent = user.bio || "No bio available.";
+  
 
   
 }
